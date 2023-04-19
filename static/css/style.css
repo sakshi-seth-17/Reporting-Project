@@ -1,0 +1,29 @@
+
+[data-testid="stArrowVegaLiteChart"] {
+	box-shadow: -2px 5px 17px #D3D3D3 ; 
+}
+	
+[data-testid="stImage"] {
+	box-shadow: -2px 5px 17px #D3D3D3 ; 
+}
+
+
+[Class="css-10trblm e16nr0p30"]{
+	margin-left: 60px;
+
+}
+[data-testid="stDateInput"] {
+	width: 450px !important;
+	margin-left: 13px !important;
+	
+	
+}
+
+[data-testid="stMarkdownContainer"]{
+	font-family: sans-serif;
+}
+.st-b8{
+	background-color: white;
+
+}
+
