@@ -66,7 +66,6 @@ WantedBy=multi-user.target
 - static/
 - app.py
 - config.json
-- error.log
 - userdefined.py
 - requirement.txt
 	
