@@ -32,7 +32,7 @@ After=multi-user.target
 User=webserver \
 Type=idle \
 ExecStart=/var/www/aspendb/probesearch/Reporting-Project/venv/bin/streamlit run /var/www/aspendb/probesearch/Reporting-Project/app.py \
-Restart=on-failure \
+Restart=on-failure 
 
 
 [Install] \
