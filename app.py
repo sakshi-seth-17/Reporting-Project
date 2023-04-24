@@ -1,3 +1,4 @@
+#Import necessary packages
 import streamlit as st
 import datetime
 from datetime import date, datetime, timedelta
@@ -13,10 +14,11 @@ import time
 from userdefined import *
 
 
+#Set page width to wide
 st.set_page_config(layout="wide",initial_sidebar_state='collapsed')
 
 
-
+#Css for graph div and image div
 pagecss = '''    
 <style>
     [data-testid="stVerticalBlock"] {
@@ -25,17 +27,21 @@ pagecss = '''
 </style>
 '''
 
+#DB path on webserver
 dbPath = "/var/www/aspendb/probesearch/SensorsData/Data-Store.db"
 
 
+#local_css() to read css file and apply on the entire page
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 
+#buildChart() takes dataframe, xAxis, yAxis and title of the graph to plot images
 def buildChart(df,xAxis,yAxis,title):
     
     xAxis = xAxis+":O"
+    #initialize chart object and add data
     chart = alt.Chart(df).mark_circle().encode(
         alt.X('utchoursminutes(xAxis):O', title='time of day'),
         alt.Y(yAxis, title='Value'),
@@ -46,6 +52,7 @@ def buildChart(df,xAxis,yAxis,title):
         ]
     ).interactive()
         
+    #set chart properties
     chart = chart.properties(
         title={
             'text': title,
@@ -64,6 +71,7 @@ def buildChart(df,xAxis,yAxis,title):
     return chart
     
     
+#make_grid() uses encoded image and plot it based on the initialized time range for each tabs on the UI
 def make_grid(itemList,df,section):
     width = 80
     height = 65
@@ -83,19 +91,19 @@ def make_grid(itemList,df,section):
 
     
 
-
+#readSqlite() reads data based on the query provided and returns a dataframe
 def readSqlite(query,dbPath):
     conn = sqlite3.connect(dbPath)
     df = pd.read_sql_query(query, conn)
     return df
 
 
+#LOad required file
 local_css("/var/www/aspendb/probesearch/Reporting-Project/static/css/style.css")
 config = readJson("/var/www/aspendb/probesearch/Reporting-Project/config.json")
 
-
+#Load queries
 QueryDict = config["Query"]
-#refDate = datetime.strptime(datetime.now().strftime("%d-%m-%Y 0:0:0"), '%d-%m-%Y 0:0:0')  - timedelta(days=6)
 
 
 #Main container
