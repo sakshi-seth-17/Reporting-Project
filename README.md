@@ -9,7 +9,7 @@ This application is built using Python's streamlit package to show observations 
 
 ### Instructions
 1. Clone this repository. \
-`git clone https://github.com/sakshi-seth-17/Data-Collector-RPI3.git`
+`git clone https://github.com/sakshi-seth-17/Reporting-Project.git`
 
 2. Make neccessary changes required in the app.py wrt specific path. \
 
