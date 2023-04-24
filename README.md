@@ -59,3 +59,14 @@ WantedBy=multi-user.target
 ---
 ### How to register a new RPI to this application?
 •	Add the query in the config file by referring to the older query to get data from the database. Note: The name of columns should be same as mentioned in the older query.
+
+---
+Folder Structure
+	- venv/
+ - static/
+	- app.py
+	- config.json
+	- error.log
+	- userdefined.py
+	- requirement.txt
+	
