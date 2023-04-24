@@ -62,11 +62,11 @@ WantedBy=multi-user.target
 
 ---
 ### Folder Structure
-	- venv/
- 	- static/
-	- app.py
-	- config.json
-	- error.log
-	- userdefined.py
-	- requirement.txt
+- venv/
+- static/
+- app.py
+- config.json
+- error.log
+- userdefined.py
+- requirement.txt
 	
