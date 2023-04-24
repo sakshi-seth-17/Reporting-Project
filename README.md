@@ -61,9 +61,9 @@ WantedBy=multi-user.target
 •	Add the query in the config file by referring to the older query to get data from the database. Note: The name of columns should be same as mentioned in the older query.
 
 ---
-Folder Structure
+### Folder Structure
 	- venv/
- - static/
+ 	- static/
 	- app.py
 	- config.json
 	- error.log
