@@ -43,7 +43,7 @@ Paste below lines inside the file by making necessary changes \
 `sudo systemctl enable dailyreport.service` \
 `sudo systemctl daemon-reload` \
 `sudo systemctl start dailyreport.service` \
-`sudo systemctl status dailyreport.service` \
+`sudo systemctl status dailyreport.service` 
 
 ---
 ### Location details of the components:
