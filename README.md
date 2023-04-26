@@ -23,6 +23,7 @@ use the link from the cmd and check on browser \
 ### Create service file to make the app run indefinitely
 `sudo nano /lib/systemd/system/dailyreport.service` \
 Paste below lines inside the file by making necessary changes \
+
 	[Unit] 
 	Description=Daily Report Service 
 	After=multi-user.target 
