@@ -14,29 +14,29 @@ This application is built using Python's streamlit package to show observations 
 2. Make neccessary changes required in the app.py wrt specific path. \
 
 3. Travel to the parent project directory and install the required python packages. \
-`Create virtual environment – python3 -m venv venv` \
+Create virtual environment – `python3 -m venv venv` \
 `source venv/bin/activate` \
 `pip3 install -r requirement.txt` \
-`To check if application is working fine run – streamlit run app.py` \
-`use the link from the cmd and check on browser` \
+To check if application is working fine run – `streamlit run app.py` \
+use the link from the cmd and check on browser \
 
 ### Create service file to make the app run indefinitely
 `sudo nano /lib/systemd/system/dailyreport.service` \
 Paste below lines inside the file by making necessary changes \
-[Unit] \
-Description=Daily Report Service \
-After=multi-user.target 
+	[Unit] 
+	Description=Daily Report Service 
+	After=multi-user.target 
 
 
-[Service] \
-User=webserver \
-Type=idle \
-ExecStart=/var/www/aspendb/probesearch/Reporting-Project/venv/bin/streamlit run /var/www/aspendb/probesearch/Reporting-Project/app.py \
-Restart=on-failure 
+	[Service] 
+	User=webserver 
+	Type=idle 
+	ExecStart=/var/www/aspendb/probesearch/Reporting-Project/venv/bin/streamlit run /var/www/aspendb/probesearch/Reporting-Project/app.py 
+	Restart=on-failure 
 
 
-[Install] \
-WantedBy=multi-user.target 
+	[Install] 
+	WantedBy=multi-user.target 
 
 `sudo chmod 644 /lib/systemd/system/dailyreport.service` \
 `sudo systemctl enable dailyreport.service` \
