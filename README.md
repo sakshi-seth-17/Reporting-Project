@@ -5,7 +5,7 @@ This application is built using Python's streamlit package to show observations 
 ---
 
 ### Flow of the application:
-<img src="https://github.com/sakshi-seth-17/Reporting-Project/blob/main/Sensor-Daily-Report.jpg" alt="Alt text" title="Optional title">
+<img src="https://github.com/sakshi-seth-17/Reporting-Project/blob/main/DailyReportFlow.jpg" alt="Alt text" title="Optional title">
 
 ### Instructions
 1. Clone this repository. \
