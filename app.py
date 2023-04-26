@@ -12,11 +12,14 @@ import sqlite3
 import base64
 import time
 from userdefined import *
+import logging
 
 
 #Set page width to wide
 st.set_page_config(layout="wide",initial_sidebar_state='collapsed')
 
+logging.basicConfig(filename='/var/www/aspendb/probesearch/Reporting-Project/error.log', filemode='a', format='%(asctime)s - %(message)s', level=logging.INFO)
+logging.info("Error log for Reporting-Project")
 
 #Css for graph div and image div
 pagecss = '''    
