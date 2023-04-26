@@ -11,18 +11,18 @@ This application is built using Python's streamlit package to show observations 
 1. Clone this repository. \
 `git clone https://github.com/sakshi-seth-17/Reporting-Project.git`
 
-2. Make neccessary changes required in the app.py wrt specific path. \
+2. Make neccessary changes required in the app.py wrt specific path. 
 
 3. Travel to the parent project directory and install the required python packages. \
 Create virtual environment – `python3 -m venv venv` \
 `source venv/bin/activate` \
 `pip3 install -r requirement.txt` \
-To check if application is working fine run – `streamlit run app.py` \
+To check if application is working fine run – `streamlit run app.py` 
 use the link from the cmd and check on browser \
 
 ### Create service file to make the app run indefinitely
 `sudo nano /lib/systemd/system/dailyreport.service` \
-Paste below lines inside the file by making necessary changes \
+Paste below lines inside the file by making necessary changes 
 
 	[Unit] 
 	Description=Daily Report Service 
