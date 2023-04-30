@@ -18,7 +18,7 @@ Create virtual environment – `python3 -m venv venv` \
 `source venv/bin/activate` \
 `pip3 install -r requirement.txt` \
 To check if application is working fine run – `streamlit run app.py` 
-use the link from the cmd and check on browser \
+use the link from the cmd and check on browser 
 
 ### Create service file to make the app run indefinitely
 `sudo nano /lib/systemd/system/dailyreport.service` \
